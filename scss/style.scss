@@ -1,6 +1,7 @@
 :root {
   --primary: #586f7c;
   --second: #b8dbd9;
+  --darksecond: #5da3a3;
   --third: #3f474b;
 
   --black: #000000;
@@ -135,12 +136,12 @@ h3 {
 .product {
   background-color: var(--third);
   padding: 1rem;
-  border-radius: 1.5rem;
+  border-radius: 2rem;
 }
 
 .product__image {
   width: 100%;
-  border-radius: 1.5rem;
+  border-radius: 2rem;
 }
 
 .product__info {
@@ -170,7 +171,7 @@ h3 {
   background-repeat: no-repeat;
   background-size: cover;
   grid-column: 1 / 3;
-  border-radius: 1.5rem;
+  border-radius: 2rem;
 }
 
 .graphic--shirt {
@@ -214,7 +215,7 @@ h3 {
   padding: 1rem;
   width: 100%;
   place-self: center;
-  border-radius: 1.5rem;
+  border-radius: 2rem;
 }
 @media (min-width: 768px) {
   .us__image {
@@ -240,5 +241,117 @@ h3 {
   text-align: center;
   .block__title {
     margin: 0;
+  }
+}
+
+/* Product Page */
+
+.shirt__image {
+  border-radius: 2rem;
+  width: 90%;
+}
+
+.shirt {
+  display: grid;
+  place-items: center;
+}
+
+.shirt__content {
+  text-align: center;
+  p {
+    font-family: var(--pfont);
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: bold;
+  }
+}
+
+@media (min-width: 768px) {
+  .shirt {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    place-items: center;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+.form__field {
+  border: 1rem solid var(--third);
+  background-color: transparent;
+  color: black;
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  appearance: none;
+  &::placeholder {
+    color: #000;
+  }
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .form__field {
+    border: 1rem solid var(--third);
+    background-color: transparent;
+    color: black;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    appearance: none;
+    &::placeholder {
+      color: #000;
+    }
+    padding: 1rem;
+    margin-bottom: 0;
+  }
+}
+
+.form__submit {
+  background-color: var(--second);
+
+  border: none;
+  font-size: 2rem;
+  width: 100%;
+  font-family: var(--pfont);
+  padding: 1.8rem;
+  transition: background-color 0.25s ease;
+  border-radius: 3rem;
+  grid-column: 1 / 3;
+
+  &:hover {
+    cursor: pointer;
+    background-color: var(--darksecond);
+  }
+}
+
+@media (min-width: 768px) {
+  .form__submit {
+    .form__submit {
+      background-color: var(--second);
+
+      border: none;
+      font-size: 2rem;
+      font-family: var(--pfont);
+      padding: 1.8rem;
+      transition: background-color 0.25s ease;
+      border-radius: 3rem;
+      grid-column: 1 / 3;
+
+      &:hover {
+        cursor: pointer;
+        background-color: var(--darksecond);
+      }
+    }
   }
 }
